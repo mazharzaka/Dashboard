@@ -1,0 +1,148 @@
+#view {
+  display: block;
+  padding: 13px;
+  background-color: #f1f1f1;
+  color: #1c4e80;
+}
+#view:hover {
+  background-color: #1c4e80;
+  color: #f1f1f1;
+}
+#dele:hover {
+  background-color: #d11515;
+  color: #f1f1f1;
+}
+.action {
+  display: flex;
+}
+#dele {
+  display: block;
+  padding: 13px;
+  background-color: #f1f1f1;
+  color: #d11515;
+  border: 1px solid #d11515;
+}
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#add {
+  display: block;
+  padding: 13px;
+  background-color: #09743e;
+  color: #f1f1f1;
+
+  border: 1px solid #09743e;
+}
+#add:hover {
+  color: #09743e;
+  background-color: #f1f1f1;
+}
+.add-card {
+  position: absolute;
+  width: 75%;
+  height: 580px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.user-card {
+  width: 450px;
+
+  background-color: #f1f1f1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 7px;
+  transition: 2s;
+}
+.add-avtar {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+}
+.inputGroup {
+  font-family: "Segoe UI", sans-serif;
+  margin: 1em 0 0.5em 0;
+  max-width: 190px;
+  position: relative;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup input:focus + label,
+input:invalid + label {
+  transform: translateY(-50%) scale(0.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #f1f1f1;
+  color: #1c4e80;
+}
+.inputGroup input:focus + #wid,
+input:invalid + #wid {
+  background-color: #ffff;
+}
+
+.inputGroup input:focus {
+  border-color: #1c4e80;
+}
+#upload-card {
+  border-radius: 7px;
+  padding: 11px;
+  font-size: 14px;
+  margin-right: 0px;
+}
+#form-up {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.btn-sub {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+#cancel {
+  background-color: #d11515;
+  color: #f1f1f1;
+  border: 1px solid #d11515;
+}
+
+#cancel:hover {
+  color: #d11515;
+  background-color: #f1f1f1;
+}
+#submit {
+  background-color: #187a05;
+  color: #f1f1f1;
+  border: 1px solid #187a05;
+}
+#submit:hover {
+  color: #187a05;
+  background-color: #f1f1f1;
+}

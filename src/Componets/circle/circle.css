@@ -1,0 +1,125 @@
+.circle {
+  display: flex;
+
+  justify-content: center;
+  width: 150px;
+}
+.total {
+  position: absolute;
+  margin-top: 65px;
+}
+.con {
+  width: 100%;
+  display: flex;
+  height: 68%;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-after: 1px solid #a7bac4;
+  border-block-end: 1px solid #a7bac4;
+  border-bottom: 1px solid #a7bac4;
+}
+.mark span {
+  position: relative;
+  width: 3px;
+  height: 8px;
+}
+.cir-title {
+  display: flex;
+
+  border-bottom: 1px solid #a7bac4;
+}
+.mark {
+  margin-top: 3px;
+  margin-right: 2px;
+  display: flex;
+  margin-left: 20px;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.markup {
+  background-color: rgb(255, 199, 69);
+}
+.markdown {
+  background-color: #1c4e80;
+}
+.result {
+  display: flex;
+  height: 60px;
+}
+.r-result {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #a7bac4;
+}
+.l-result {
+  width: 50%;
+  height: 100%;
+}
+#my-tooltip {
+  background-color: #1c4e80f6 !important;
+}
+.name-r {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mark-r {
+  width: 7px;
+  height: 2px;
+  background-color: #1c4e80;
+  margin-right: 2px;
+}
+.mark-l {
+  width: 7px;
+  height: 2px;
+  background-color: rgb(255, 199, 69);
+  margin-right: 2px;
+}
+.pie {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid #a7bac4;
+  font-size: 18px;
+}
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.pro {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.a {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(16, 150, 24);
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.b {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(220, 57, 18);
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.c {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(51, 102, 204);
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.d {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #990099;
+  margin-right: 2px;
+  margin-left: 2px;
+}

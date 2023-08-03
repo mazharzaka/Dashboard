@@ -1,0 +1,86 @@
+.canlender-contain.active {
+  margin-left: 100px;
+}
+.canlender-contain,
+.Image-contain {
+  transition: 2s;
+  margin-top: 50px;
+  padding: 30px;
+}
+.demo-app-sidebar {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.demo-app-main {
+  padding-right: 20px;
+}
+.demo-app-sidebar-section {
+  width: 80%;
+  padding-left: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  background-color: #a5d8dd;
+}
+.demo-app-sidebar-section ul {
+  margin-top: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.demo-app-sidebar-section ul li {
+  margin-right: 30px;
+}
+#events {
+  /* border-left: 1px solid; */
+  margin-left: 12px;
+}
+.recorde {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.contian-recorde {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 7px;
+  width: 70%;
+}
+.text-script {
+  height: 300px;
+  width: 100%;
+  padding: 10px;
+
+  overflow-y: auto;
+}
+.btns {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card video {
+  margin-top: 10px;
+  width: 100%;
+  height: 240px;
+}
+.form-input input {
+  display: none;
+}
+.form-input label {
+  display: block;
+}
+.form-input {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.img {
+  width: 50%;
+}
+.img-card {
+  width: 100%;
+  height: 200px;
+}
+#down,
+#start {
+  display: none;
+}

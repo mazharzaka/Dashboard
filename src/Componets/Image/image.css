@@ -1,0 +1,136 @@
+.nameimage {
+  text-align: center;
+}
+.input {
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 50px;
+  border-radius: 50px;
+  border: 0.5px solid;
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.Image-contain {
+  margin-top: 80px !important;
+}
+input {
+  padding-left: 10px;
+}
+.butt {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.gn-btn {
+  background-color: #1c4e80;
+  text-align: center;
+  color: #f1f1f1;
+  border-radius: 18px;
+  padding: 17px;
+  border: 1px solid #1c4e80;
+  transition: 2s;
+  margin-right: 5px;
+}
+.gn-btn:hover {
+  background-color: #f1f1f1;
+  color: #1c4e80;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  height: 300px;
+  display: none;
+}
+.img-gn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  height: 300px;
+}
+.img img {
+  width: 300px;
+}
+.card-cotainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.card {
+  display: flex;
+  width: 400px;
+  background-color: #fff;
+
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  flex-direction: column;
+}
+.d-item {
+  width: 200px;
+  height: 150px;
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.color {
+  margin-right: 10px;
+}
+.colors {
+  display: flex;
+  justify-content: center;
+}
+.color-lable {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.pic-emogy {
+  /* background-color: #350678; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pic-emogy.active {
+  width: 100%;
+  height: 200px;
+}
+.emogy.active {
+  animation: movepic 4s linear infinite;
+  width: 100px;
+}
+@keyframes movepic {
+  50% {
+    width: 250px;
+  }
+}
+.emogy {
+  width: 50%;
+  margin-top: 15px;
+}
+.nums {
+  display: none;
+}
+#width {
+  width: 160px;
+  margin-top: 10px;
+}
+.nums.active {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#down {
+  border: 1px solid #d11515;
+  background-color: #d11515;
+  direction: none;
+}
+#down:hover {
+  background-color: #f1f1f1;
+  color: #d11515;
+}

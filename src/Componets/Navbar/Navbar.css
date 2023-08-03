@@ -1,0 +1,68 @@
+.header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: #24395a;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #7e909a;
+  justify-content: space-between;
+  z-index: 10;
+}
+.search {
+  margin-left: 230px;
+  display: flex;
+  align-items: center;
+}
+.header input {
+  outline: none;
+  height: 30px;
+}
+.icon-search {
+  position: absolute;
+  margin-left: 140px;
+}
+.things {
+  margin-right: 10px;
+  display: flex;
+}
+
+.world,
+.ring,
+.mode,
+.full,
+.message {
+  font-size: 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  transition: 1s;
+}
+.world:hover,
+.ring:hover,
+.mode:hover,
+.full:hover,
+.message:hover {
+  color: #8d96a9;
+}
+.ring,
+.mode {
+  font-size: 18px;
+}
+.nameofworld {
+  font-size: 16px;
+  font-weight: 100;
+  margin-left: 1px;
+}
+.pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.pic img {
+  width: 100%;
+  height: 100%;
+}
