@@ -6,13 +6,18 @@ import {Tooltip} from "react-tooltip";
 import {FaPlus, FaCloudUploadAlt} from "react-icons/fa";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-
+import {redirect, useParams, useNavigate} from "react-router-dom";
+// import history from "./history";
+// import {Routes, Route} from "react-router-dom";
+// import View from "../View";
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 export default function Users() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-
+  const [userid, setuserid] = useState(1);
+  let {userId} = useParams();
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -63,9 +68,10 @@ export default function Users() {
       renderCell: () => {
         return (
           <div className="action">
-            <button className="gn-btn" id="view">
+            {/* <Link style={{textDecoration: "none"}}></Link> */}
+            <button className="gn-btn" id="view" onClick={View}>
               View
-            </button>
+            </button>{" "}
             <button className="gn-btn" id="dele" onClick={dele}>
               Delete
             </button>
@@ -193,6 +199,15 @@ export default function Users() {
       setItems(items);
     }
   }, []);
+  const View = (e) => {
+    const row = e.target.parentElement.parentElement.parentElement;
+    const rowid = parseInt(row.getAttribute("data-id"));
+    setuserid(rowid);
+    console.log(rowid);
+    navigate(`/View/${rowid}`);
+
+    // console.log(history);
+  };
   const src = (e) => {
     if (e.target.files.length > 0) {
       var src = URL.createObjectURL(e.target.files[0]);

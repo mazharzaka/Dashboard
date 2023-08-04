@@ -10,6 +10,7 @@ import SpeachToText from "./Componets/SpeachToText";
 import Users from "./Componets/Users";
 import ThreeD from "./Componets/3D";
 import Removebg from "./Componets/Removebg";
+import View from "./Componets/View";
 import Resize from "./Componets/Resize";
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/Users" element={<Users />} exact />
           <Route path="/remove" element={<Removebg />} exact />
           <Route path="/3Dmodle" element={<ThreeD />} exact />
+          <Route path="/View/:id" element={<View />} exact />
           <Route path="/Resize" element={<Resize />} exact />
         </Routes>
       </div>

@@ -31,7 +31,7 @@ function Nav() {
           <BiExitFullscreen />
         </div>
         <div className="pic">
-          <img src="./zaka.jpg" />
+          <img src="./zaka (5).jpg" />
         </div>
       </div>
     </div>

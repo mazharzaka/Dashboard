@@ -2,11 +2,11 @@
   display: block;
   padding: 13px;
   background-color: #f1f1f1;
-  color: #1c4e80;
+  color: #1c4e80 !important;
 }
 #view:hover {
   background-color: #1c4e80;
-  color: #f1f1f1;
+  color: #f1f1f1 !important;
 }
 #dele:hover {
   background-color: #d11515;
