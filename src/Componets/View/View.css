@@ -1,9 +1,10 @@
 .user-form {
-  width: 350px;
+  width: 35%;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 200px;
+  height: 250px;
   border-radius: 7px;
+  padding: 20px;
 }
 .pic-ava {
   height: 70px;
@@ -14,7 +15,8 @@
 }
 .fullname {
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-weight: 500;
 }
 .label-name {
   position: absolute;
@@ -26,8 +28,16 @@
   justify-content: center;
 }
 .line {
-  width: 400px;
-  height: 300px;
+  margin-left: 10px;
+  width: 55%;
+  height: 250px;
+  padding: 20px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 7px;
+}
+.user-row {
+  display: flex;
+  font-size: 20px;
+  font-weight: 300;
 }
