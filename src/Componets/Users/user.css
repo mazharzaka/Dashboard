@@ -83,7 +83,9 @@
   border-radius: 20px;
   width: 100%;
 }
-
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 20px !important;
+}
 .inputGroup label {
   font-size: 100%;
   position: absolute;
@@ -145,4 +147,8 @@ input:invalid + #wid {
 #submit:hover {
   color: #187a05;
   background-color: #f1f1f1;
+}
+.text-margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

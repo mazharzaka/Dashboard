@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from "react";
 import "./user.css";
 import {DataGrid} from "@mui/x-data-grid";
-import {Avatar} from "@mui/material";
+import {Avatar, TextField} from "@mui/material";
 import {Tooltip} from "react-tooltip";
 import {FaPlus, FaCloudUploadAlt} from "react-icons/fa";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import {useNavigate} from "react-router-dom";
-
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
@@ -176,6 +175,116 @@ export default function Users() {
       email: "Harvey852@gmail.com",
     },
   ];
+  const lines = [
+    {
+      id: 1,
+      march: 10,
+      april: 90,
+      may: 100,
+      june: 50,
+      july: 170,
+      color: "hsl(2, 70%, 50%)",
+    },
+    {
+      id: 2,
+      march: 50,
+      april: 30,
+      may: 90,
+      june: 110,
+      july: 50,
+      color: "hsl(227, 70%, 50%)",
+    },
+    {
+      id: 3,
+      march: 88,
+      april: 30,
+      may: 45,
+      june: 100,
+      july: 25,
+      color: "hsl(227, 70%, 50%)",
+    },
+    {
+      id: 4,
+      march: 70,
+      april: 35,
+      may: 16,
+      june: 75,
+      july: 90,
+      color: "hsl(186, 70%, 50%)",
+    },
+    {
+      id: 5,
+      march: 33,
+      april: 100,
+      may: 70,
+      june: 80,
+      july: 50,
+      color: "hsl(227, 70%, 50%)",
+    },
+    {
+      id: 6,
+      march: 70,
+      april: 100,
+      may: 50,
+      june: 40,
+      july: 170,
+      color: "hsl(186, 70%, 50%)",
+    },
+    {
+      id: 7,
+      march: 11,
+      april: 60,
+      may: 44,
+      june: 90,
+      july: 88,
+      color: "hsl(186, 70%, 50%)",
+    },
+    {
+      id: 8,
+      march: 101,
+      april: 70,
+      may: 44,
+      june: 50,
+      july: 98,
+      color: "hsl(186, 70%, 50%)",
+    },
+    {
+      id: 9,
+      march: 110,
+      april: 90,
+      may: 80,
+      june: 70,
+      july: 9,
+      color: "hsl(186, 70%, 50%)",
+    },
+    {
+      id: 10,
+      march: 66,
+      april: 90,
+      may: 96,
+      june: 50,
+      july: 80,
+      color: "hsl(130, 70%, 50%)",
+    },
+    {
+      id: 11,
+      march: 90,
+      april: 67,
+      may: 44,
+      june: 180,
+      july: 98,
+      color: "hsl(2, 70%, 50%)",
+    },
+    {
+      id: 12,
+      march: 101,
+      april: 70,
+      may: 44,
+      june: 50,
+      july: 98,
+      color: "hsl(130, 70%, 50%)",
+    },
+  ];
 
   const [img, setimg] = useState(null);
   const [fname, setfname] = useState(null);
@@ -183,10 +292,12 @@ export default function Users() {
   const [email, setemail] = useState(null);
   const [age, setage] = useState(null);
   const [items, setItems] = useState([]);
+  // localStorage.setItem("lineChart", JSON.stringify(lines));
+
   useEffect(() => {
-    // localStorage.setItem("rows", JSON.stringify(rows));
     const items = JSON.parse(localStorage.getItem("rows"));
-    console.log(items);
+    const userline = JSON.parse(localStorage.getItem("lineChart"));
+    console.log(userline);
     if (items) {
       setItems(items);
 
@@ -281,64 +392,52 @@ export default function Users() {
                 <FaCloudUploadAlt id="icon-upload" />
               </label>
             </div>
-            {/* <div class="inputGroup">
-              <input
-                type="text"
-                required=""
-                autocomplete="off"
-                onChange={(e) => setid(parseInt(e.target.value))}
-              />
-              <label for="name">ID</label>
-            </div> */}
-            <div class="inputGroup">
-              <input
-                type="text"
-                required=""
-                autocomplete="off"
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="FirstName"
+                variant="outlined"
                 onChange={(e) => setfname(e.target.value)}
               />
-              <label for="name">FirstName</label>
             </div>
-            <div class="inputGroup">
-              <input
-                type="text"
-                required=""
-                autocomplete="off"
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="LastName"
+                variant="outlined"
                 onChange={(e) => setlname(e.target.value)}
               />
-              <label for="name">LastName</label>
             </div>
-            <div class="inputGroup">
-              <input
-                type="text"
-                required=""
-                autocomplete="off"
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
                 onChange={(e) => setemail(e.target.value)}
               />
-              <label for="name">Email</label>
             </div>
-            <div class="inputGroup">
-              <input
-                type="text"
-                required=""
-                autocomplete="off"
-                onChange={(e) => setage(parseInt(e.target.value))}
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="Age"
+                variant="outlined"
+                type="number"
+                onChange={(e) => setage(e.target.value)}
               />
-              <label for="name">Age</label>
             </div>
-          </div>
-          <div className="btn-sub">
-            <button className="gn-btn" id="submit" onClick={submit}>
-              Submit
-            </button>
-            <button
-              className="gn-btn"
-              id="cancel"
-              onClick={() => {
-                document.querySelector(".add-card").style.display = "none";
-              }}>
-              Cancel
-            </button>
+            <div className="btn-sub">
+              <button className="gn-btn" id="submit" onClick={submit}>
+                Submit
+              </button>
+              <button
+                className="gn-btn"
+                id="cancel"
+                onClick={() => {
+                  document.querySelector(".add-card").style.display = "none";
+                }}>
+                Cancel
+              </button>{" "}
+            </div>
           </div>
         </div>
       </div>

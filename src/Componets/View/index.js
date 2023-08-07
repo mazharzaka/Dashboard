@@ -4,16 +4,21 @@ import {Avatar} from "@mui/material";
 import "./View.css";
 
 import Lineuser from "../Line";
+import Userpie from "../userpie";
 export default function View() {
   const {id} = useParams();
   const [user, setuser] = useState([]);
+  const [userline, setuserline] = useState([]);
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("rows"));
+    const line = JSON.parse(localStorage.getItem("lineChart"));
 
     const result = items.filter((e) => e.id == id);
+    const chart = line.filter((e) => e.id == id);
     setuser(result);
-    // console.log(user[0] == undefined);
+    setuserline(chart[0]);
+    // console.log(chart[0]);
   });
   return (
     <div className="canlender-contain">
@@ -54,7 +59,16 @@ export default function View() {
           </div>
         </div>
         {/* <div>  </div> */}
-        <Lineuser />
+        <Lineuser
+          x={(userline[0] = undefined ? console.log(userline) : userline)}
+        />
+      </div>
+      <div className="user-row">
+        <div className="user-form" id="pie">
+          <Userpie
+            x={(userline[0] = undefined ? console.log(userline) : userline)}
+          />
+        </div>
       </div>
     </div>
   );

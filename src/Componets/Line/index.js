@@ -1,41 +1,42 @@
 import React from "react";
 import {ResponsiveLine} from "@nivo/line";
-const dataline = [
-  {
-    id: "japan",
-    color: "hsl(93, 70%, 50%)",
-    data: [
-      {
-        x: "plane",
-        y: 108,
-      },
-      {
-        x: "helicopter",
-        y: 95,
-      },
-      {
-        x: "boat",
-        y: 191,
-      },
-      {
-        x: "train",
-        y: 6,
-      },
-      {
-        x: "subway",
-        y: 176,
-      },
-    ],
-  },
-];
 
-export default function Lineuser() {
+export default function Lineuser(props) {
+  const dataline = [
+    {
+      id: "japan",
+      color: props.x.color,
+      data: [
+        {
+          x: "March",
+          y: props.x.march,
+        },
+        {
+          x: "April",
+          y: props.x.april,
+        },
+        {
+          x: "May",
+          y: props.x.may,
+        },
+        {
+          x: "June",
+          y: props.x.june,
+        },
+        {
+          x: "July",
+          y: props.x.july,
+        },
+      ],
+    },
+  ];
+  // console.log(props.x.color);
   return (
     <div className="line">
       {" "}
       <ResponsiveLine
         data={dataline}
-        margin={{top: 10, right: 20, bottom: 50, left: 50}}
+        margin={{top: 10, right: 10, bottom: 60, left: 30}}
         xScale={{type: "point"}}
         yScale={{
           type: "linear",
@@ -55,18 +56,11 @@ export default function Lineuser() {
           legendOffset: 36,
           legendPosition: "middle",
         }}
-        // axisLeft={{
-        //   tickSize: 5,
-        //   tickPadding: 5,
-        //   tickRotation: 0,
-        //   legend: "count",
-        //   legendOffset: -40,
-        //   legendPosition: "middle",
-        // }}
+        colors={{scheme: "dark2"}}
         pointSize={10}
         pointColor={{from: "color", modifiers: []}}
         pointBorderWidth={2}
-        pointBorderColor={{from: "serieColor"}}
+        pointBorderColor={{from: "serieColor", modifiers: []}}
         pointLabelYOffset={-12}
         useMesh={true}
         legends={[]}
