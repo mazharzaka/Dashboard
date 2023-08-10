@@ -41,6 +41,16 @@
   font-size: 20px;
   font-weight: 300;
 }
-#pie {
+.pie-view {
   margin-top: 20px;
+  width: 400px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 260px;
+  border-radius: 7px;
+  padding: 20px;
+}
+#view-geo {
+  margin-top: 20px;
+  margin-left: 40px;
 }

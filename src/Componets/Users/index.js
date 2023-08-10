@@ -13,12 +13,13 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 export default function Users() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [month, setmonth] = useState(false);
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
     }
-
+    setmonth(false);
     setOpen(false);
   };
 
@@ -291,6 +292,11 @@ export default function Users() {
   const [lname, setlname] = useState(null);
   const [email, setemail] = useState(null);
   const [age, setage] = useState(null);
+  const [march, setmarch] = useState(null);
+  const [april, setapril] = useState(null);
+  const [may, setmay] = useState(null);
+  const [june, setjune] = useState(null);
+  const [july, setjuly] = useState(null);
   const [items, setItems] = useState([]);
   // localStorage.setItem("lineChart", JSON.stringify(lines));
 
@@ -298,12 +304,13 @@ export default function Users() {
     const items = JSON.parse(localStorage.getItem("rows"));
     const userline = JSON.parse(localStorage.getItem("lineChart"));
     console.log(userline);
-    if (items) {
+    if (items && userline) {
       setItems(items);
 
       console.log(items);
     } else {
       localStorage.setItem("rows", JSON.stringify(rows));
+      localStorage.setItem("rows", JSON.stringify(lines));
       setItems(items);
     }
   }, []);
@@ -331,22 +338,44 @@ export default function Users() {
     }
   };
   const submit = () => {
+    const line = JSON.parse(localStorage.getItem("lineChart"));
     const users = JSON.parse(localStorage.getItem("rows"));
     let lastElement = users[users.length - 1];
-    const user = {
-      id: lastElement.id + 1,
-      lastName: fname,
-      firstName: lname,
-      age: age,
-      email: email,
-      img: img,
-    };
 
-    users.push(user);
-    localStorage.setItem("rows", JSON.stringify(users));
-
-    setItems(users);
-    document.querySelector(".add-card").style.display = "none";
+    if (
+      march != null ||
+      april != null ||
+      may != null ||
+      june != null ||
+      july != null
+    ) {
+      const data = {
+        id: lastElement.id + 1,
+        march: march,
+        april: april,
+        may: may,
+        june: june,
+        july: july,
+      };
+      const user = {
+        id: lastElement.id + 1,
+        lastName: fname,
+        firstName: lname,
+        age: age,
+        email: email,
+        img: img,
+      };
+      users.push(user);
+      localStorage.setItem("rows", JSON.stringify(users));
+      setItems(users);
+      line.push(data);
+      localStorage.setItem("lineChart", JSON.stringify(line));
+      // setItems(line);
+      document.querySelector(".add-card").style.display = "none";
+    } else {
+      return setmonth(true);
+      // console.log("submit");
+    }
   };
 
   return (
@@ -356,7 +385,14 @@ export default function Users() {
           The user has been deleted
         </Alert>
       </Snackbar>
+
       <div className="user">
+        {" "}
+        <Snackbar open={month} autoHideDuration={3000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity="error" sx={{width: "100%"}}>
+            You must enter numbers for all months to confirm
+          </Alert>
+        </Snackbar>
         <div className="lable">Add User</div>
         <button
           className="gn-btn"
@@ -423,6 +459,51 @@ export default function Users() {
                 variant="outlined"
                 type="number"
                 onChange={(e) => setage(e.target.value)}
+              />
+            </div>
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="March"
+                variant="outlined"
+                type="number"
+                onChange={(e) => setmarch(e.target.value)}
+              />
+            </div>
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="April"
+                variant="outlined"
+                type="number"
+                onChange={(e) => setapril(e.target.value)}
+              />
+            </div>
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="May"
+                variant="outlined"
+                type="number"
+                onChange={(e) => setmay(e.target.value)}
+              />
+            </div>
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="June"
+                variant="outlined"
+                type="number"
+                onChange={(e) => setjune(e.target.value)}
+              />
+            </div>
+            <div className="text-margin">
+              <TextField
+                id="outlined-basic"
+                label="July"
+                variant="outlined"
+                type="number"
+                onChange={(e) => setjuly(e.target.value)}
               />
             </div>
             <div className="btn-sub">

@@ -28,7 +28,9 @@ const Home = () => {
         </div>
         <div className="area">
           <Areac />
-          <Geo />
+          <div className="geo">
+            <Geo />
+          </div>
         </div>
         <div className="grid">
           <GridTable />

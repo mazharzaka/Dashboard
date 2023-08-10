@@ -3,7 +3,7 @@ import "./Side.css";
 import {BiMenuAltLeft} from "react-icons/bi";
 import {FaPlus} from "react-icons/fa";
 import {FaChartPie} from "react-icons/fa";
-import {FaImages} from "react-icons/fa";
+import {FaImages, FaFilePdf} from "react-icons/fa";
 import {CiMicrophoneOn} from "react-icons/ci";
 import {FaMinus} from "react-icons/fa";
 import {FaUserAlt} from "react-icons/fa";
@@ -137,14 +137,16 @@ function Sidebar() {
               </div>
             </div>
           </Link>{" "}
-          <div className="item" onClick={decor}>
-            <div className="icon">
-              <BsTruck />
-            </div>{" "}
-            <div className="nameoficon" onClick={decor}>
-              Delivery
+          <Link to="/wordtopdf" style={{textDecoration: "none"}}>
+            <div className="item" onClick={decor}>
+              <div className="icon">
+                <FaFilePdf />
+              </div>{" "}
+              <div className="nameoficon" onClick={decor}>
+                WordtoPdf
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="main">

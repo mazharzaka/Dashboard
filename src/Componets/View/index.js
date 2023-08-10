@@ -5,6 +5,7 @@ import "./View.css";
 
 import Lineuser from "../Line";
 import Userpie from "../userpie";
+import Geo from "../Geo";
 export default function View() {
   const {id} = useParams();
   const [user, setuser] = useState([]);
@@ -64,10 +65,13 @@ export default function View() {
         />
       </div>
       <div className="user-row">
-        <div className="user-form" id="pie">
+        <div className="pie-view">
           <Userpie
             x={(userline[0] = undefined ? console.log(userline) : userline)}
           />
+        </div>
+        <div className="geo" id="view-geo">
+          <Geo />
         </div>
       </div>
     </div>
