@@ -1,0 +1,33 @@
+.titlepdf {
+  text-align: center;
+  margin-top: 20px;
+}
+#form-pdf {
+  display: flex;
+  justify-content: center;
+}
+#start-pdf {
+  display: none;
+  justify-content: center;
+}
+#pdf-btn {
+  font-size: 22px;
+
+  background-color: #d11515;
+  color: #f1f1f1;
+  border: 1px solid #d11515;
+}
+#pdf-btn:hover {
+  background-color: #1c4e80;
+  border: 1px solid #1c4e80;
+}
+#pdf-start:hover {
+  background-color: #d11515;
+  border: 1px solid #d11515;
+}
+#pdf-start {
+  font-size: 22px;
+  background-color: #1c4e80;
+  color: #f1f1f1;
+  border: 1px solid #1c4e80;
+}

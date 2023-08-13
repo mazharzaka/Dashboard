@@ -12,6 +12,7 @@ import ThreeD from "./Componets/3D";
 import Removebg from "./Componets/Removebg";
 import View from "./Componets/View";
 import Resize from "./Componets/Resize";
+import WordtoPdf from "./Componets/WordtoPdf";
 const App = () => {
   return (
     <div>
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/3Dmodle" element={<ThreeD />} exact />
           <Route path="/View/:id" element={<View />} exact />
           <Route path="/Resize" element={<Resize />} exact />
+          <Route path="/wordtopdf" element={<WordtoPdf document={'document.docx'} />} exact />
         </Routes>
       </div>
     </div>

@@ -373,7 +373,7 @@ export default function Users() {
       // setItems(line);
       document.querySelector(".add-card").style.display = "none";
     } else {
-      return setmonth(true);
+      setmonth(true);
       // console.log("submit");
     }
   };

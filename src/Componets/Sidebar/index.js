@@ -119,14 +119,16 @@ function Sidebar() {
               <div className="nameoficon">Users</div>
             </div>
           </Link>
-          <div className="item" onClick={decor}>
-            <div className="icon">
-              <BsMegaphoneFill />
+          <Link to="/Resize" style={{textDecoration: "none"}}>
+            <div className="item" onClick={decor}>
+              <div className="icon">
+                <BsMegaphoneFill />
+              </div>{" "}
+              <div className="nameoficon" onClick={decor}>
+                PhotoGallery
+              </div>
             </div>{" "}
-            <div className="nameoficon" onClick={decor}>
-              Products
-            </div>
-          </div>{" "}
+          </Link>
           <Link to="/Resize" style={{textDecoration: "none"}}>
             <div className="item" onClick={decor}>
               <div className="icon">

@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import {BiSolidDownload} from "react-icons/bi";
+import {TextField} from "@mui/material";
 import Resizer from "react-image-file-resizer";
 export default function Resize() {
   const [img, setimg] = useState(null);
@@ -90,26 +91,22 @@ export default function Resize() {
           </div>
           <div className="nums">
             <div class="inputGroup">
-              <input
-                type="text"
-                required=""
-                autocomplete="off"
+              <TextField
+                id="outlined-basic"
+                label="Width"
+                variant="outlined"
+                type="number"
                 onChange={(e) => setwidth(e.target.value)}
               />
-              <label for="name" id="wid">
-                Width
-              </label>
             </div>
             <div class="inputGroup">
-              <input
-                type="text"
-                required=""
-                autocomplete="off"
+              <TextField
+                id="outlined-basic"
+                label="Height"
+                variant="outlined"
+                type="number"
                 onChange={(e) => setheight(e.target.value)}
               />
-              <label for="name" id="wid">
-                Height
-              </label>
             </div>
           </div>
           <div className="form-input">
