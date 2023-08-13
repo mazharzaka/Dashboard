@@ -12,7 +12,7 @@ import {BsFillMoonFill} from "react-icons/bs";
 import {BiCrop} from "react-icons/bi";
 import {BsTruck} from "react-icons/bs";
 import {AiOutlineCalendar} from "react-icons/ai";
-import {BiSolidMagicWand} from "react-icons/bi";
+import {BiSolidMagicWand, BiSun} from "react-icons/bi";
 import {FaStar} from "react-icons/fa";
 import {FiLogOut} from "react-icons/fi";
 import {FiUser} from "react-icons/fi";
@@ -21,6 +21,7 @@ import {Link} from "react-router-dom";
 function Sidebar() {
   const [side, setside] = useState(false);
   const [show, setshow] = useState(false);
+  const [dark, setdark] = useState(true);
 
   const bar = () => {
     const sidebar = document.querySelector(".sidebar");
@@ -41,16 +42,20 @@ function Sidebar() {
     console.log(e.target.parentElementr);
     if (container.className == "main") {
       const listm = container.querySelector(".list-main");
-      console.log(container);
+      // console.log(container);
 
       listm.classList.toggle("active");
     } else if (container.className == "title") {
       const listm = container.parentElement.querySelector(".list-main");
-      console.log(container.parentElement);
+      // console.log(container.parentElement);
 
       listm.classList.toggle("active");
     }
-    e.target.parentElement.classList.toggle("active");
+
+    e.target.parentElement.classList
+      ? e.target.parentElement.classList.toggle("active")
+      : e.target.parentElement.parentElement.classList.toggle("active");
+
     setshow(!show);
   };
   const decor = (e) => {
@@ -70,6 +75,13 @@ function Sidebar() {
       : e.target.classList.add("active");
 
     console.log(e.target.className);
+  };
+  const mode = () => {
+    dark
+      ? document.querySelector("body").setAttribute("data-mode", "dark")
+      : document.querySelector("body").setAttribute("data-mode", "light");
+
+    setdark(!dark);
   };
   return (
     <div className="sidebar">
@@ -250,11 +262,9 @@ function Sidebar() {
               LogOut
             </div>
           </div>
-          <div className="item" onClick={decor}>
-            <div className="icon">
-              <BsFillMoonFill />
-            </div>{" "}
-            <div className="nameoficon" onClick={decor}>
+          <div className="item" onClick={mode}>
+            <div className="icon">{dark ? <BsFillMoonFill /> : <BiSun />}</div>{" "}
+            <div className="nameoficon" onClick={mode}>
               Mode
             </div>
           </div>

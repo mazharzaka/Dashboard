@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./App.css";
 import Home from "./Componets/Home";
 import Nav from "./Componets/Navbar";
@@ -13,7 +13,12 @@ import Removebg from "./Componets/Removebg";
 import View from "./Componets/View";
 import Resize from "./Componets/Resize";
 import WordtoPdf from "./Componets/WordtoPdf";
+
 const App = () => {
+  // const navagate = Navigate();
+  // useEffect(() => {
+  //   navagate("/");
+  // }, []);
   return (
     <div>
       <Nav />
@@ -33,7 +38,11 @@ const App = () => {
           <Route path="/3Dmodle" element={<ThreeD />} exact />
           <Route path="/View/:id" element={<View />} exact />
           <Route path="/Resize" element={<Resize />} exact />
-          <Route path="/wordtopdf" element={<WordtoPdf document={'document.docx'} />} exact />
+          <Route
+            path="/wordtopdf"
+            element={<WordtoPdf document={"document.docx"} />}
+            exact
+          />
         </Routes>
       </div>
     </div>

@@ -1,7 +1,7 @@
 .user-form {
   width: 400px;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* background-color: #fff; */
+  box-shadow: var(--shadow) 0px 5px 15px;
   height: 260px;
   border-radius: 7px;
   padding: 20px;
@@ -32,8 +32,8 @@
   width: 45%;
   height: 260px;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--card--);
+  box-shadow: var(--shadow) 0px 5px 15px;
   border-radius: 7px;
 }
 .user-row {
@@ -44,8 +44,9 @@
 .pie-view {
   margin-top: 20px;
   width: 400px;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--card--);
+
+  box-shadow: var(--shadow) 0px 5px 15px;
   height: 260px;
   border-radius: 7px;
   padding: 20px;

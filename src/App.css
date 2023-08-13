@@ -6,16 +6,30 @@
 }
 body {
   font-family: "Roboto Condensed", sans-serif;
-  background-color: #f1f1f1;
+  background-color: var(--bg--);
+  color: var(--black--);
+}
+.css-1lymaxv-MuiDataGrid-root,
+.css-rtrcn9-MuiTablePagination-root:last-child {
+  color: var(--black--) !important;
+}
+[data-mode="dark"] {
+  --bg--: #042547;
+  --shadow: rgb(221 214 214 / 50%);
+  --black--: #f1f1f1;
+  --card--: #586680;
 }
 /* #F1F1F1, #202020, #7E909A, #1C4E80, #A5D8DD, #EA6A47, #0091D5 */
 :root {
   --bg--: #f1f1f1;
-  --black--: #202020;
-  --gray--: #7e909a;
-  --blue--: #1c4e80;
-  --babyblue--: #a5d8dd;
-  --orange--: #ea6a47;
+  --red--: #202020;
+  --card--: #fff;
+  --black--: #000000;
+  --shadow: rgba(0, 0, 0, 0.35);
+
+  --red--: #d11515;
+  --shadow: rgba(0, 0, 0, 0.35);
+
   --babyblue--: #0091d5;
   --dbg--: #042547;
   --dblack--: #24395a;
