@@ -35,7 +35,7 @@ export default function SpeachToText() {
           Text is copied
         </Alert>
       </Snackbar>
-      <h2 className="nameimage">SpeachToText</h2>
+      <h2 className="nameimage">SpeachToText <span className="ar">ar</span></h2>
       <div className="recorde">
         <div className="contian-recorde">
           <p className="text-script"> {transcript}</p>

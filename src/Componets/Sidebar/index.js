@@ -131,7 +131,7 @@ function Sidebar() {
               <div className="nameoficon">Users</div>
             </div>
           </Link>
-          <Link to="/Resize" style={{textDecoration: "none"}}>
+          {/* <Link to="/Resize" style={{textDecoration: "none"}}>
             <div className="item" onClick={decor}>
               <div className="icon">
                 <BsMegaphoneFill />
@@ -140,7 +140,7 @@ function Sidebar() {
                 PhotoGallery
               </div>
             </div>{" "}
-          </Link>
+          </Link> */}
           <Link to="/Resize" style={{textDecoration: "none"}}>
             <div className="item" onClick={decor}>
               <div className="icon">
