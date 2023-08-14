@@ -104,7 +104,7 @@ function Sidebar() {
           </span>
         </div>{" "}
         <div className="list-main">
-          <Link to="/" style={{textDecoration: "none"}}>
+          <Link to="/dashboard" style={{textDecoration: "none"}}>
             {" "}
             <div className="item" onClick={decor}>
               <div className="icon">

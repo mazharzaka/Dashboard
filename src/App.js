@@ -25,7 +25,7 @@ const App = () => {
       <Sidebar />
       <div className="content">
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/dashboard" exact element={<Home />} />
           <Route path="/Calendar" element={<Calendar />} exact />
           <Route
             path="/ImageGenerator"
