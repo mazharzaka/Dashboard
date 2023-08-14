@@ -106,7 +106,7 @@ function Sidebar() {
         <div className="list-main">
           <Link to="/" style={{textDecoration: "none"}}>
             {" "}
-            <div className="item active" onClick={decor}>
+            <div className="item" onClick={decor}>
               <div className="icon">
                 <FaChartPie />
               </div>{" "}
@@ -246,14 +246,16 @@ function Sidebar() {
           </span>
         </div>
         <div className="list-main">
-          <div className="item" onClick={decor}>
-            <div className="icon">
-              <FiUser />
-            </div>{" "}
-            <div className="nameoficon" onClick={decor}>
-              Profillo
+          <Link to="https://phenomenal-pasca-0e27e1.netlify.app/">
+            <div className="item" onClick={decor}>
+              <div className="icon">
+                <FiUser />
+              </div>{" "}
+              <div className="nameoficon" onClick={decor}>
+                Profillo
+              </div>
             </div>
-          </div>
+          </Link>
           <div className="item" onClick={decor}>
             <div className="icon">
               <FiLogOut />
