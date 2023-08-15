@@ -9,12 +9,22 @@
   bottom: 0;
   z-index: 20;
 }
-/* :root {
-  --shadow: rgba(0, 0, 0, 0.35);
+@media only screen and (max-width: 500px) {
+  .charts {
+    justify-content: center;
+  }
+  .cir,
+  .table,
+  .bars-chart {
+    width: 250px !important;
+    height: 270px;
+    margin-bottom: 20px;
+    margin-right: 20px !important;
+  }
+  .bars-chart {
+    height: 330px !important;
+  }
 }
-[data-mode="dark"] {
-  --shadow: rgb(221 214 214 / 78%);
-} */
 .sidebar.active {
   width: 50px;
 }
