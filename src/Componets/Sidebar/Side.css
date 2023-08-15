@@ -24,6 +24,9 @@
   .bars-chart {
     height: 330px !important;
   }
+  .sidebar {
+    width: 50px;
+  }
 }
 .sidebar.active {
   width: 50px;
