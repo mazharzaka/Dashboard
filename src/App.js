@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "./App.css";
 import Home from "./Componets/Home";
 import Nav from "./Componets/Navbar";
@@ -15,12 +15,20 @@ import Resize from "./Componets/Resize";
 import WordtoPdf from "./Componets/WordtoPdf";
 
 const App = () => {
-  // const navagate = Navigate();
-  // useEffect(() => {
-  //   navagate("/");
-  // }, []);
+  const [side, setside] = useState(false);
+
+  const sidebar = () => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    // const sidebar = document.querySelector(".sidebar");
+    const sidebar = document.querySelector(".sidebar");
+    if (mediaQuery.matches && side) {
+      sidebar.classList.add("active");
+      console.log(sidebar.className == "sidebar active");
+    }
+    sidebar.className == "sidebar" ? setside(true) : setside(false);
+  };
   return (
-    <div>
+    <div onClick={sidebar}>
       <Nav />
       <Sidebar />
       <div className="content">

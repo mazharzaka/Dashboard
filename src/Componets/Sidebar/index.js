@@ -30,24 +30,25 @@ function Sidebar() {
     if (mediaQuery.matches) {
       content.classList.add("active");
       sidebar.classList.add("active");
-      // setside(!side);
-    } else {
-      content.classList.remove("active");
-      sidebar.classList.remove("active");
+      setside(!side);
     }
   }, []);
   const bar = () => {
     const sidebar = document.querySelector(".sidebar");
     const content = document.querySelector(".content");
-    const Image = document.querySelector(".Image-contain");
-    if (side) {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    if (mediaQuery.matches && sidebar.className == "sidebar active") {
+      sidebar.classList.remove("active");
+      content.classList.remove("active");
+      setside(true);
+    } else if (side) {
       sidebar.classList.remove("active");
       content.classList.remove("active");
     } else {
       content.classList.add("active");
       sidebar.classList.add("active");
     }
-    console.log(Image);
+
     setside(!side);
   };
   const list = (e) => {
