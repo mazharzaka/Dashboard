@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./Side.css";
 import {BiMenuAltLeft} from "react-icons/bi";
 import {FaPlus} from "react-icons/fa";
@@ -22,7 +22,20 @@ function Sidebar() {
   const [side, setside] = useState(false);
   const [show, setshow] = useState(false);
   const [dark, setdark] = useState(true);
-
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    // const sidebar = document.querySelector(".sidebar");
+    const sidebar = document.querySelector(".sidebar");
+    const content = document.querySelector(".content");
+    if (mediaQuery.matches) {
+      content.classList.add("active");
+      sidebar.classList.add("active");
+      // setside(!side);
+    } else {
+      content.classList.remove("active");
+      sidebar.classList.remove("active");
+    }
+  }, []);
   const bar = () => {
     const sidebar = document.querySelector(".sidebar");
     const content = document.querySelector(".content");
@@ -90,7 +103,7 @@ function Sidebar() {
         <div className="bars" onClick={bar}>
           <BiMenuAltLeft />
         </div>{" "}
-        <Link to="/" style={{textDecoration: "none"}}>
+        <Link to="/dashboard" style={{textDecoration: "none"}}>
           <div className="name">
             Z<span>admin</span>
           </div>
