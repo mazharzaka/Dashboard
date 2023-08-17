@@ -301,7 +301,7 @@ export default function Users() {
 
   useEffect(() => {
     localStorage.setItem("lineChart", JSON.stringify(lines));
-    localStorage.setItem("lineChart", JSON.stringify(rows));
+    localStorage.setItem("rows", JSON.stringify(rows));
     const items = JSON.parse(localStorage.getItem("rows"));
     const userline = JSON.parse(localStorage.getItem("lineChart"));
     console.log(userline);
@@ -311,7 +311,7 @@ export default function Users() {
       console.log(items);
     } else {
       localStorage.setItem("rows", JSON.stringify(rows));
-      localStorage.setItem("rows", JSON.stringify(lines));
+      localStorage.setItem("lineChart", JSON.stringify(lines));
       setItems(items);
       console.log(items);
     }
