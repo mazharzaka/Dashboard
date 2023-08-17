@@ -26,7 +26,7 @@
     margin-right: 20px !important;
   }
   .grid {
-    width: 270px !important;
+    width: 100% !important;
     height: 270px;
     margin-bottom: 20px;
     margin-right: 20px !important;
@@ -35,7 +35,7 @@
     height: 330px !important;
   }
   .content {
-    margin-left: 100px !important;
+    margin-left: 70px !important;
   }
   .content .contaier {
     justify-content: center !important;
@@ -46,9 +46,10 @@
   .sidebar.active {
     box-shadow: none !important;
   }
-  .emogy.active {
-    width: 50% !important;
-  }
+  /* .emogy {
+    width: 70px !important;
+    animation: movepic 4s linear infinite;
+  } */
   .img-gn {
     height: 200px;
   }
