@@ -298,9 +298,10 @@ export default function Users() {
   const [june, setjune] = useState(null);
   const [july, setjuly] = useState(null);
   const [items, setItems] = useState([]);
-  // localStorage.setItem("lineChart", JSON.stringify(lines));
 
   useEffect(() => {
+    localStorage.setItem("lineChart", JSON.stringify(lines));
+    localStorage.setItem("lineChart", JSON.stringify(rows));
     const items = JSON.parse(localStorage.getItem("rows"));
     const userline = JSON.parse(localStorage.getItem("lineChart"));
     console.log(userline);
@@ -312,6 +313,7 @@ export default function Users() {
       localStorage.setItem("rows", JSON.stringify(rows));
       localStorage.setItem("rows", JSON.stringify(lines));
       setItems(items);
+      console.log(items);
     }
   }, []);
   const View = (e) => {

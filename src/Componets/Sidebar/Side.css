@@ -314,7 +314,7 @@
   flex-direction: column-reverse;
 }
 .item.active {
-  background-color: #f1f1f1;
+  background-color: var(--bg--);
   border-radius: 50px 0% 0% 50px;
   padding: 10px;
 }
