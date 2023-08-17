@@ -109,7 +109,7 @@ function Sidebar() {
         <div className="bars" onClick={bar}>
           <BiMenuAltLeft />
         </div>{" "}
-        <Link to="/dashboard" style={{textDecoration: "none"}}>
+        <Link to="/" style={{textDecoration: "none"}}>
           <div className="name">
             Z<span>admin</span>
           </div>
@@ -123,7 +123,7 @@ function Sidebar() {
           </span>
         </div>{" "}
         <div className="list-main">
-          <Link to="/dashboard" style={{textDecoration: "none"}}>
+          <Link to="/" style={{textDecoration: "none"}}>
             {" "}
             <div className="item" onClick={decor}>
               <div className="icon">

@@ -300,20 +300,18 @@ export default function Users() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem("lineChart", JSON.stringify(lines));
-    localStorage.setItem("rows", JSON.stringify(rows));
-    const items = JSON.parse(localStorage.getItem("rows"));
+    const item = JSON.parse(localStorage.getItem("rows"));
     const userline = JSON.parse(localStorage.getItem("lineChart"));
     console.log(userline);
-    if (items && userline) {
-      setItems(items);
+    if (item && userline) {
+      setItems(item);
 
-      console.log(items);
+      console.log(item);
     } else {
-      localStorage.setItem("rows", JSON.stringify(rows));
       localStorage.setItem("lineChart", JSON.stringify(lines));
-      setItems(items);
-      console.log(items);
+      localStorage.setItem("rows", JSON.stringify(rows));
+      setItems(item);
+      console.log(item);
     }
   }, []);
   const View = (e) => {
