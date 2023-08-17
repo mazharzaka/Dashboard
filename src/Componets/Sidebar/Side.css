@@ -10,13 +10,23 @@
   z-index: 20;
 }
 @media only screen and (max-width: 500px) {
-  .charts {
+  .charts,
+  .area {
     justify-content: center;
   }
   .cir,
   .table,
-  .bars-chart {
+  .bars-chart,
+  .area-chart,
+  .geo,
+  .grid {
     width: 250px !important;
+    height: 270px;
+    margin-bottom: 20px;
+    margin-right: 20px !important;
+  }
+  .grid {
+    width: 270px !important;
     height: 270px;
     margin-bottom: 20px;
     margin-right: 20px !important;
@@ -35,6 +45,12 @@
   }
   .sidebar.active {
     box-shadow: none !important;
+  }
+  .emogy.active {
+    width: 50% !important;
+  }
+  .img-gn {
+    height: 200px;
   }
 }
 .sidebar.active {

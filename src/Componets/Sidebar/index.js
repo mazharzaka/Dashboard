@@ -65,8 +65,10 @@ function Sidebar() {
 
       listm.classList.toggle("active");
     }
-
-    e.target.parentElement.classList
+    console.log(e.target.parentElement.className.animVal);
+    e.target.parentElement.className.animVal == "p" || "m"
+      ? e.target.parentElement.parentElement.classList.toggle("active")
+      : e.target.parentElement.classList
       ? e.target.parentElement.classList.toggle("active")
       : e.target.parentElement.parentElement.classList.toggle("active");
 
@@ -82,13 +84,16 @@ function Sidebar() {
 
       //
     });
+
     e.target.className == "nameoficon"
       ? e.target.parentElement.classList.add("active")
       : e.target.parentElement.className == "icon"
       ? e.target.parentElement.parentElement.classList.add("active")
+      : e.target.parentElement.parentElement.className == "icon"
+      ? e.target.parentElement.parentElement.parentElement.classList.add(
+          "active"
+        )
       : e.target.classList.add("active");
-
-    console.log(e.target.className);
   };
   const mode = () => {
     dark

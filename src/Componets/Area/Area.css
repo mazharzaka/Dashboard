@@ -7,6 +7,7 @@
   box-shadow: var(--shadow) 0px 5px 15px;
   margin-right: 20px;
 }
+
 .chart {
   width: 20px;
 }
@@ -23,6 +24,7 @@
 .area {
   display: flex;
   margin-top: 10px;
+  flex-flow: wrap;
 }
 .geo {
   width: 45%;
