@@ -9,8 +9,8 @@ body {
   background-color: var(--bg--);
   color: var(--black--);
 }
-.css-1lymaxv-MuiDataGrid-root,
-.css-rtrcn9-MuiTablePagination-root:last-child {
+.css-f75cnp,
+.css-1lymaxv-MuiDataGrid-root {
   color: var(--black--) !important;
 }
 [data-mode="dark"] {

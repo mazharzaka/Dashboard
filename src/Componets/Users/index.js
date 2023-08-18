@@ -532,7 +532,6 @@ export default function Users() {
           },
         }}
         pageSizeOptions={[9, 12]}
-        checkboxSelection
       />
     </div>
   );
