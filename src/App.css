@@ -10,7 +10,8 @@ body {
   color: var(--black--);
 }
 .css-f75cnp,
-.css-1lymaxv-MuiDataGrid-root {
+.css-1lymaxv-MuiDataGrid-root,
+.css-rtrcn9-MuiTablePagination-root {
   color: var(--black--) !important;
 }
 [data-mode="dark"] {
@@ -18,6 +19,7 @@ body {
   --shadow: rgb(221 214 214 / 50%);
   --black--: #f1f1f1;
   --card--: #586680;
+  --dray--: #f1f1f1;
 }
 /* #F1F1F1, #202020, #7E909A, #1C4E80, #A5D8DD, #EA6A47, #0091D5 */
 :root {
@@ -33,7 +35,7 @@ body {
   --babyblue--: #0091d5;
   --dbg--: #042547;
   --dblack--: #23354e;
-  --dray--: #3f4f6d;
+  --dray--: #24395a;
   --dblue--: #586680;
   --dbabyblue--: #737d94;
   --dorange--: #8d96a9;

@@ -18,8 +18,7 @@
   element.style {
     width: 100%;
   }
-  .canlender-contain,
-  .Image-contain {
+  #users {
     transition: 2s;
     margin-top: 66px !important;
     padding: 0px !important;
@@ -329,7 +328,7 @@
   padding: 10px;
 }
 .item.active .nameoficon {
-  color: #24395a;
+  color: var(--dray--);
 }
 .plus .p {
   display: block;

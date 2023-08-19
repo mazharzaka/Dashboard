@@ -379,7 +379,7 @@ export default function Users() {
   };
 
   return (
-    <div className="canlender-contain" style={{width: "100%"}}>
+    <div className="canlender-contain" id="users" style={{width: "100%"}}>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="error" sx={{width: "100%"}}>
           The user has been deleted
