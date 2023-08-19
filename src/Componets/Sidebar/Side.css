@@ -34,6 +34,19 @@
     margin-bottom: 20px;
     margin-right: 20px !important;
   }
+  .user-row {
+    flex-direction: column;
+  }
+  .user-form,
+  .pie-view {
+    width: 350px !important;
+  }
+  .line,
+  #view-geo {
+    margin-left: 0px !important;
+    width: 350px !important;
+    margin-top: 20px !important;
+  }
   .grid {
     width: 100% !important;
     height: 270px;
