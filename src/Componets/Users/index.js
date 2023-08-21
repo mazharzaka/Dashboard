@@ -80,12 +80,18 @@ export default function Users() {
   const dele = (e) => {
     const row = e.target.parentElement.parentElement.parentElement;
     const items = JSON.parse(localStorage.getItem("rows"));
+    const userline = JSON.parse(localStorage.getItem("lineChart"));
+
     console.log(items);
     const rowid = parseInt(row.getAttribute("data-id"));
     setOpen(true);
 
     const result = items.filter((e) => e.id != rowid);
+    const user = userline.filter((e) => e.id != rowid);
+
     setItems(result);
+    localStorage.setItem("lineChart", JSON.stringify(user));
+
     localStorage.setItem("rows", JSON.stringify(result));
   };
   const rows = [
