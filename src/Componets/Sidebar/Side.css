@@ -47,6 +47,21 @@
     width: 350px !important;
     margin-top: 20px !important;
   }
+  .text-script {
+    width: 291px !important;
+  }
+  .contian-recorde {
+    width: 100% !important;
+  }
+  .fc .fc-toolbar {
+    flex-direction: column !important;
+  }
+  .search {
+    display: none;
+  }
+  .things {
+    margin-left: 100px;
+  }
   .grid {
     width: 100% !important;
     height: 270px;
