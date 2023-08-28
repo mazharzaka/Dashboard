@@ -47,8 +47,8 @@ export default function ImageGenerator() {
         </div>
         {/*  */}
       </div>
-      <div className="img-gn">
-        <img src={images} />
+      <div className="gn">
+        <img className="pic-gn" src={images} />
       </div>
     </div>
   );
