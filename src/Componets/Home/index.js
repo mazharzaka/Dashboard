@@ -1,12 +1,12 @@
 import React from "react";
 
 import Widdget from "../widdget";
-import Circle from "../circle";
 import PieChar from "../piechart";
 import Bars from "../Bars";
 import Areac from "../Area";
 import Geo from "../Geo";
 import GridTable from "../Grid";
+import Circle from "../circle";
 
 const Home = () => {
   return (

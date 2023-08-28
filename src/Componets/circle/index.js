@@ -1,78 +1,47 @@
-import React from "react";
-import "react-tooltip/dist/react-tooltip.css";
-import {Tooltip} from "react-tooltip";
-import {FaAngleUp} from "react-icons/fa";
-import {CircularProgressbar, buildStyles} from "react-circular-progressbar";
+import React, {useCallback, useState} from "react";
+import {PieChart, Pie, ResponsiveContainer, Cell} from "recharts";
+import RenderActiveShape from "./cir";
 import "./circle.css";
-export const Circle = () => {
-  const percentage = 55;
+
+export default function Circle() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const onPieEnter = useCallback(
+    (_, index) => {
+      setActiveIndex(index);
+    },
+    [setActiveIndex]
+  );
+  const data = [
+    {name: "Male", value: 400},
+    {name: "Female", value: 300},
+  ];
+
   return (
     <div className="cir">
-      <div className="cir-title">
-        <div className="mark">
-          <span className="markup"></span>
-          <span className="markdown"></span>
+      <div class="cir-title">
+        <div class="mark">
+          <span class="markup"></span>
+          <span class="markdown"></span>
         </div>
         Candidates
       </div>
-      <div className="con">
-        {" "}
-        <div
-          className="circle"
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="Male 55%">
-          {" "}
-          <Tooltip id="my-tooltip" />{" "}
-          <CircularProgressbar
-            value={percentage}
-            // text="Total : 2345"
-            styles={buildStyles({
-              // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-              strokeLinecap: "butt",
-
-              // Text size
-              textSize: "16px",
-
-              // Colors
-              pathColor: `#1c4e80`,
-              textColor: "#202020",
-              trailColor: "rgb(255, 199, 69)",
-              backgroundColor: "rgb(255, 199, 69)",
-            })}
+      {/* <div className="con"> </div> */}
+      <ResponsiveContainer width="100%" height="80%">
+        <PieChart width={200} height={150}>
+          <Pie
+            activeIndex={activeIndex}
+            activeShape={RenderActiveShape}
+            data={data}
+            cx="50%"
+            cy="50%"
+            innerRadius={50}
+            outerRadius={60}
+            fill="#ffc745"
+            dataKey="value"
+            onMouseEnter={onPieEnter}
           />
-          <div className="total">Total : 2340</div>
-        </div>
-      </div>
-      <div className="result">
-        <div className="r-result">
-          <div className="name-r">
-            <span className="mark-r"></span>
-            Male
-          </div>
-          <div className="re">
-            <div className="value">1287</div>
-            <div className="percent pos">
-              16%
-              <FaAngleUp className="icon-color" />
-            </div>
-          </div>
-        </div>
-        <div className="l-result">
-          {" "}
-          <div className="name-r">
-            <span className="mark-l"></span>
-            Female
-          </div>
-          <div className="re">
-            <div className="value">1053</div>
-            <div className="percent neg">
-              11%
-              <FaAngleUp className="icon-color" />
-            </div>
-          </div>
-        </div>
-      </div>
+        </PieChart>
+      </ResponsiveContainer>
     </div>
   );
-};
-export default Circle;
+}

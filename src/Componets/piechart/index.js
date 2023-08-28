@@ -1,6 +1,5 @@
 import React from "react";
 import {PieChart, Pie, Cell, Tooltip, ResponsiveContainer} from "recharts";
-
 const data = [
   {name: "Product A", value: 400},
   {name: "Product B", value: 300},

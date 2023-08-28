@@ -20,6 +20,13 @@ body {
   --black--: #f1f1f1;
   --card--: #586680;
   --dray--: #f1f1f1;
+  --cir--: #fff;
+}
+.fill {
+  fill: var(--black--) !important;
+}
+.fill-cir {
+  fill: var(--cir--) !important;
 }
 /* #F1F1F1, #202020, #7E909A, #1C4E80, #A5D8DD, #EA6A47, #0091D5 */
 :root {
@@ -31,7 +38,7 @@ body {
 
   --red--: #d11515;
   --shadow: rgba(0, 0, 0, 0.35);
-
+  --cir--: #8d96a9;
   --babyblue--: #0091d5;
   --dbg--: #042547;
   --dblack--: #23354e;
